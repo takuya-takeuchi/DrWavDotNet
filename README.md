@@ -1,8 +1,6 @@
-# ![Alt text](nuget/quantum48.png "DrWavDotNet") DrWavDotNet [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+![DrWavDotNet](https://socialify.git.ci/takuya-takeuchi/DrWavDotNet/image?description=1&font=Raleway&language=1&logo=https%3A%2F%2Fgithub.com%2Ftakuya-takeuchi%2FDrWavDotNet%2Fraw%2Fmain%2Fnuget%2Fsignal128.png&owner=1&pattern=Circuit%20Board&theme=Light)
 
-DrWav wrapper written in C++ and C# for Windows, MacOS and Linux
-
-#### DrWavDotNet
+[![GitHub Stars](https://img.shields.io/github/stars/takuya-takeuchi/drwavdotnet?label=STARS&color=%23DFB317&style=for-the-badge)]() [![GitHub Forks](https://img.shields.io/github/forks/takuya-takeuchi/drwavdotnet?label=FORKS&color=%236ECA00&style=for-the-badge)]() [![GitHub Issues](https://img.shields.io/github/issues/takuya-takeuchi/drwavdotnet?label=ISSUES&color=%23007EC6&style=for-the-badge)]() [![GitHub Lisence](https://img.shields.io/github/license/takuya-takeuchi/drwavdotnet?label=LISENCE&color=%239109BD&style=for-the-badge)]()
 
 |Package|OS|x86|x64|ARM|ARM64|Nuget|
 |---|---|---|---|---|---|---|
@@ -12,10 +10,10 @@ DrWav wrapper written in C++ and C# for Windows, MacOS and Linux
  
 ## Dependencies Libraries and Products
 
-#### [DrWav](https://github.com/OpenJij/OpenJij)
+#### [dr_wav](https://github.com/mackron/dr_libs)
 
-> **License:** Apache-2.0 License
+> **License:** Public Domain
 >
-> **Author:** DrWav
+> **Author:** David Reid
 > 
-> **Principal Use:** Framework for the Ising model and QUBO. Main goal of DrWavDotNet is what wraps DrWav by C#.
+> **Principal Use:** Public domain, single file audio decoding libraries for C and C++. Main goal of DrWavDotNet is what wraps dr_wav by C#.

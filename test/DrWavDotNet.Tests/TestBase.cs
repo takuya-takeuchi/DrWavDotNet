@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using Xunit;
 
 namespace DrWavDotNet.Tests
@@ -8,9 +9,17 @@ namespace DrWavDotNet.Tests
     public abstract class TestBase
     {
 
+        #region Fields
+
+        protected const string TestDataDirectory = "TestData";
+
+        protected const string OutputDirectory = "OutputData";
+
+        #endregion
+
         #region Methods
 
-        public void DisposeAndCheckDisposedState(DrWavObject obj)
+        protected void DisposeAndCheckDisposedState(DrWavObject obj)
         {
             if (obj == null)
                 return;
@@ -20,10 +29,22 @@ namespace DrWavDotNet.Tests
             Assert.True(obj.NativePtr == IntPtr.Zero);
         }
 
-        public void DisposeAndCheckDisposedStates(IEnumerable<DrWavObject> objs)
+        protected void DisposeAndCheckDisposedStates(IEnumerable<DrWavObject> objs)
         {
             foreach (var obj in objs)
                 this.DisposeAndCheckDisposedState(obj);
+        }
+
+        protected FileInfo GetDataFile(string filename)
+        {
+            return new FileInfo(Path.Combine(TestDataDirectory, filename));
+        }
+
+        protected string GetOutDir(params string[] function)
+        {
+            var path = Path.Combine(OutputDirectory, Path.Combine(function));
+            Directory.CreateDirectory(path);
+            return path;
         }
 
         #endregion

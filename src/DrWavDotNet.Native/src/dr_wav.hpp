@@ -51,6 +51,14 @@ DLLEXPORT drwav_bool32 drwav_drwav_init_file(drwav* const wav,
     return ::drwav_init_file(wav, tmp.c_str(), pAllocationCallback);
 }
 
+DLLEXPORT drwav_bool32 drwav_drwav_init_memory(drwav* const wav,
+                                               const void* data,
+                                               const size_t dataSize,
+                                               const drwav_allocation_callbacks* pAllocationCallback)
+{
+    return ::drwav_init_memory(wav, data, dataSize, pAllocationCallback);
+}
+
 DLLEXPORT drwav_result drwav_drwav_uninit(drwav* const wav)
 {
     return ::drwav_uninit(wav);

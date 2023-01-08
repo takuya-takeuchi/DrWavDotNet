@@ -13,9 +13,4 @@
 #define ERR_GENERAL_FILE_IO                         -(ERR_GENERAL_ERROR | 0x00000001)
 #define ERR_GENERAL_OUT_OF_RANGE                    -(ERR_GENERAL_ERROR | 0x00000002)
 
-// Image
-#define ERR_IMAGE_ERROR                                                   0x77000000
-#define ERR_IMAGE_FILE_INVALID                        -(ERR_IMAGE_ERROR | 0x00000001)
-#define ERR_IMAGE_FILE_WRONG_EXTENSION                -(ERR_IMAGE_ERROR | 0x00000002)
-
 #endif

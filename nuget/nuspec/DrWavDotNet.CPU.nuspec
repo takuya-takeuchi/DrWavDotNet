@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>DrWavDotNet</id>
+    <version>0.13.7.20230108</version>
+    <title>DrWavDotNet</title>
+    <authors>Takuya Takeuchi</authors>
+    <owners>Takuya Takeuchi</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE.txt</license>
+    <projectUrl>https://github.com/takuya-takeuchi/DrWavDotNet</projectUrl>
+    <icon>images\signal128.png</icon>
+    <description>dr_wav wrapper library written in C++ and C# for Windows, MacOS and Linux</description>
+    <releaseNotes></releaseNotes>
+    <copyright>© Takuya Takeuchi 2023</copyright>
+    <tags>dr_wav .net wav</tags>
+    <serviceable>true</serviceable>
+  </metadata>
+  
+  <files>
+    <file src="..\signal128.png" target="images\" />
+    <file src="build\DrWavDotNet.Native.props" target="build\DrWavDotNet.props" />
+    <!-- allows the 'DrWavDotNet' package to read runtimes\** folder -->
+    <file src="build\DrWavDotNet.targets" target="build\DrWavDotNet.targets" />
+    <!-- cross-targetting via compile-time references -->
+    <file src="ref\**\*" target="ref" />
+    <file src="..\artifacts\cpu\runtimes\**\*" target="runtimes" />
+
+    <file src="..\..\src\DrWavDotNet\bin\Release\netstandard2.0\DrWavDotNet.dll" target="lib\netstandard2.0" />
+    <file src="..\..\src\DrWavDotNet\bin\Release\netstandard2.0\DrWavDotNet.xml" target="lib\netstandard2.0" />
+    <!-- <file src="..\..\src\DrWavDotNet\docs\ja\*.xml" target="lib\netstandard2.0\ja" /> -->
+
+    <file src="..\artifacts\cpu\runtimes\win-x64\native\DrWavDotNetNative.dll" target="runtimes\win-x64\native\DrWavDotNetNative.dll" />
+    <file src="..\artifacts\cpu\runtimes\win-x86\native\DrWavDotNetNative.dll" target="runtimes\win-x86\native\DrWavDotNetNative.dll" />
+    <file src="..\artifacts\cpu\runtimes\linux-x64\native\libDrWavDotNetNative.so" target="runtimes\linux-x64\native\libDrWavDotNetNative.so" />
+    <file src="..\artifacts\cpu\runtimes\osx-x64\native\libDrWavDotNetNative.dylib" target="runtimes\osx-x64\native\libDrWavDotNetNative.dylib" />
+
+    <!-- license -->
+    <file src="..\..\LICENSE.txt" target="" />
+    <file src="..\..\licenses\dr_wav" target="licenses\dr_wav" />
+  </files>
+
+</package>

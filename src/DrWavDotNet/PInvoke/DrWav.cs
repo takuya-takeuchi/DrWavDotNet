@@ -7,6 +7,7 @@ using int64_t = System.Int64;
 using int8_t = System.SByte;
 using int16_t = System.Int16;
 using int32_t = System.Int32;
+using size_t = System.Int64;
 
 using drwav = System.IntPtr;
 using drwav_int16 = System.Int16;
@@ -81,6 +82,18 @@ namespace DrWavDotNet
                                                                 uint8_t[] filename,
                                                                 uint32_t filename_length,
                                                                 IntPtr pAllocationCallback);
+
+        [DllImport(NativeLibrary, CallingConvention = CallingConvention)]
+        public static extern drwav_bool32 drwav_drwav_init_memory(drwav wav,
+                                                                  uint8_t[] data,
+                                                                  size_t data_length,
+                                                                  IntPtr pAllocationCallback);
+
+        [DllImport(NativeLibrary, CallingConvention = CallingConvention)]
+        public static extern drwav_bool32 drwav_drwav_init_memory(drwav wav,
+                                                                  IntPtr data,
+                                                                  size_t data_length,
+                                                                  IntPtr pAllocationCallback);
 
         [DllImport(NativeLibrary, CallingConvention = CallingConvention)]
         public static extern drwav_result drwav_drwav_uninit(drwav wav);
